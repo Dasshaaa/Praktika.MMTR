@@ -1,0 +1,60 @@
+
+  .aquarium {
+    top: 130px;
+    left: 260px;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: aquaCube 10s infinite linear;
+  }
+
+  .aquarium> div {
+
+    opacity: 0.8;
+    position:absolute;
+  }
+
+
+  @keyframes aquaCube {
+    from {
+      transform: rotate3d(1,1,1,0);
+    }
+
+    to {
+      transform: rotate3d(1,1,1,720deg);
+    }
+  }
+
+  div:hover{
+    animation-play-state: paused;
+  }
+
+.face1{ 
+  top: 0; left: 0; 
+  transform: translate3d(0,0,200px);
+}
+  .face2
+  {top: 0; left: 0; 
+      transform: translate3d(0,0,-200px); 
+    }
+  .face3
+  { top: 0; left: 100%;
+      transform-origin: 0 0; 
+      transform: translate3d(0,0,200px) rotate3d(0,1,0,90deg);
+    }
+  .face4
+  { top: 100%; left: 0; 
+      transform-origin: 0 0; 
+      transform: translate3d(0,0,200px) rotate3d(1,0,0,-90deg);
+    }
+  .face5
+  { top: 0; right:100%;
+      transform-origin: 100% 0;  
+      transform: translate3d(0,0,200px) rotate3d(0,1,0,-90deg);
+    }
+  .face6
+  { bottom: 100%; left: 0;
+      transform-origin: 0 100%;  
+      transform: translate3d(0,0,200px) rotate3d(1,0,0,90deg);
+    }
